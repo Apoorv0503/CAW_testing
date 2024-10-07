@@ -3,19 +3,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "../utils/helper";
 import { Button } from "../utils/helper";
 import { Input } from "../utils/helper";
 import { AlertCircle, CheckCircle } from "lucide-react";
+import { fetchUserData, updateUserEmail } from "../utils/api"
 
-// Simulated API calls
-const fetchUserData = async (userId) => {
-  // Simulate API call
-  await new Promise((resolve) => setTimeout(resolve, 500));
-  return { id: userId, name: "John Doe", email: "john@example.com" };
-};
+// // Simulated API calls
+// const fetchUserData = async (userId) => {
+//   // Simulate API call
+//   await new Promise((resolve) => setTimeout(resolve, 500));
+//   return { id: userId, name: "John Doe", email: "john@example.com" };
+// };
 
-const updateUserEmail = async (userId, newEmail) => {
-  // Simulate API call
-  await new Promise((resolve) => setTimeout(resolve, 500));
-  return { success: true };
-};
+// const updateUserEmail = async (userId, newEmail) => {
+//   // Simulate API call
+//   await new Promise((resolve) => setTimeout(resolve, 500));
+//   return { success: true };
+// };
+//-----------moved these to external files for mocking them in a proper way------
 
 const UserDashboard = ({ userId }) => {
   const [user, setUser] = useState(null);

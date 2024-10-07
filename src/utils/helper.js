@@ -1,3 +1,4 @@
+//required files for our react application
 import React from 'react';
 
 export const Button = ({ children, onClick, disabled, className = '' }) => (
