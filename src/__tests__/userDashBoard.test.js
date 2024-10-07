@@ -49,6 +49,7 @@ describe("Home Component", () => {
   
 
   it("renders error message if data loading fails", async () => {
+    //mocked one failure case
     fetchUserData.mockRejectedValueOnce(new Error("API error"));
     
      await act(async () => {
